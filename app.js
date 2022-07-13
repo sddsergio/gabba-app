@@ -29,10 +29,13 @@ app.use(express.json())
 
 app.post('/api/v1/products', (req, res, next) => {
         const newProduct = new Product(req.body)
-            newProduct.save()
-        
-        res.status(201).json({ ok: true })
+            newProduct
+            .save()
+            .then((result) => {
+                res.status(201).json({ ok: true })
     })
+    .catch((err) => console.log(err))
+})
     
 app.use(express.static(path.join(__dirname, 'public')))
 
