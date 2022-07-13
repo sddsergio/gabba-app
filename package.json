@@ -1,0 +1,16 @@
+{
+  "name": "gabba-app",
+  "version": "1.0.0",
+  "description": "App para la autoescuela",
+  "main": "app.js",
+  "author": "Sergio Destefano",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  }
+}
