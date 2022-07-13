@@ -14,11 +14,14 @@ mongoose.connect(
         console.log('Conexion exitosa a la base BBDD')
     })
     .catch((error) => console.log(err))
-   
-    /*app.get('/', (req, res, next) => {
-        console.log("Petición recibida")
-        next()
-    })*/
+    
+app.use(express.json())
+
+app.post('/api/v1/products', (req, res, next) => {
+        console.log('Petición recibida')
+        console.log({ body: req.body })
+        res.status(201).json({ ok: true })
+    })
     
 app.use(express.static(path.join(__dirname, 'public')))
 
