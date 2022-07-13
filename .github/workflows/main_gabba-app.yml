@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'gabba-app'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D4EA0E56379744D6AAA5617B59784C46 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CC0CB8E687E34E3A99C03EA2811E41E6 }}
           package: .
