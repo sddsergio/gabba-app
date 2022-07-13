@@ -1,37 +1,10 @@
-///require('dotenv').config()//archivo para no enviar al repo
-/*const { default: mongoose, mongo } = require('mongoose')*/
+require('dotenv').config()//archivo para no enviar al
+const { default: mongoose, mongo } = require('mongoose')
 const express = require('express') 
 const path = require('path')
 const app = express()
 
-app.use(express.static(path.join(__dirname, 'public')))
-
-
-app.get('/', (req, res, next) => {
-    console.log("Petición recibida")
-
-    next()
-})
-
-
-const PORT = process.env.PORT || 4000
-
-console.log(`Servidor escuchando en el puerto ${PORT}`)
-app.listen(4000, (req, res) => {
-})
-
-/*mongoose.connect(
-    `mongodb+srv://sddsergio:${process.env.MONGO_DB_PASS}@cluster0.3sxfzkb.mongodb.net/gabba-app?retryWrites=true&w=majority`
-)
-/*.then((result) => {
-    app.listen(PORT, () => {
-        console.log(`Servidor escuando en el puerto ${PORT}`)
-    })
-        console.log('Conexion exitosa a la base BBDD')
-    })
-    .catch((error) => console.log(err))
-
-/*mongoose.connect(
+mongoose.connect(
     `mongodb+srv://sddsergio:${process.env.MONGO_DB_PASS}@cluster0.3sxfzkb.mongodb.net/gabba-app?retryWrites=true&w=majority`
 )
 .then((result) => {
@@ -41,6 +14,23 @@ app.listen(4000, (req, res) => {
         console.log('Conexion exitosa a la base BBDD')
     })
     .catch((error) => console.log(err))
+   
+    /*app.get('/', (req, res, next) => {
+        console.log("Petición recibida")
+        next()
+    })*/
+    
+app.use(express.static(path.join(__dirname, 'public')))
+
+
+/*app.listen(4000, (req, res) => {
+    console.log(`Servidor escuchando en el puerto ${PORT}`)
+})*/
+
+const PORT = process.env.PORT || 4000
+
+
+
 
 /*const productSchema = mongoose.Schema(
     {
