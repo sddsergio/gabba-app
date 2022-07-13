@@ -21,27 +21,21 @@ mongoose.connect(
     })
     .catch((error) => console.log(err))
 
-const productSchema = mongoose.Schema(
+/*const productSchema = mongoose.Schema(
     {
         name: { type: String, required: true },
         price: Number,
     },
     { timestamps: true }
-)
+)*/
 
 const Product = mongoose.model('Product', productSchema)
 
 app.use(express.json())
 
-app.post('/api/v1/products', (req, res) => {
-    const newProduct = new Product( req.body )
-
-    newProduct
-    .save()
-    .then((result) => {
-        res.status(201).json({ ok: true })
+app.post('/api/v1/products', (req, res, next) => {
+    console.log({ body: req.body })
+    res.status(201).json({ ok: true })
     })
-    .catch((err) => console.log(err))
-})
 
 const PORT = process.env.PORT || 4000
