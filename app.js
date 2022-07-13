@@ -1,8 +1,8 @@
 require('dotenv').config()
 const express = require('express')
+const app = express()
 /*const { default: mongoose, mongo } = require('mongoose')*/
 ///const path = require('path')
-const app = express()
 ///const { default: mongoose, mongo } = require('mongoose')
 
 /*mongoose.connect(
@@ -44,7 +44,7 @@ const app = express()
 
 app.get('/', (req, res,) => {
     console.log("Petición recibida")
-    res.status(201).send('<h1>Hola mundo!</h1>')
+    ///res.status(201).send('<h1>Hola mundo!</h1>')
     })
 
 const PORT = process.env.PORT || 4000
