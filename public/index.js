@@ -1,10 +1,10 @@
-/*
+
 const inputName = document.querySelector('#productName')
 const inputPrice = document.querySelector('#productPrice')
 const button = document.querySelector('button')
 
 
-/*button.addEventListener('click', (e) => {
+button.addEventListener('click', (e) => {
     const name = inputName.value 
     const price = inputPrice.value
 
@@ -18,6 +18,6 @@ const button = document.querySelector('button')
             price: price,
         })
     })
-})*/
+})
     
 
