@@ -1,3 +1,5 @@
+const { application } = require("express")
+
 const inputName = document.querySelector('#productName')
 const inputPrice = document.querySelector('#productPrice')
 const button = document.querySelector('button')

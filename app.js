@@ -42,8 +42,5 @@ app.post('/api/v1/products', (req, res) => {
     })
     .catch((err) => console.log(err))
 })
-///    res.status(200)
-///    .sendFile('index.html', { root : __dirname })
-
 
 const PORT = process.env.PORT || 4000
